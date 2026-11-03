@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /404
+Disallow: /api/
+Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content&yclid&gclid /
+
+Sitemap: https://xn-----7kcdhu8a2aaseabhpi9n.xn--p1ai/sitemap.xml

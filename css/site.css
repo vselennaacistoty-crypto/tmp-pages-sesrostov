@@ -1,0 +1,727 @@
+/* Главная — редизайн 10.10.2026. Стили прототипа владельца без изменений (_design/redesign-2026-10-10/prototype-02-site/style.css),
+   заменены только пути к шрифтам: TTF → /fonts/*.woff2. Добавки для сайта — в home-site.css. */
+@font-face{font-family:Onest;src:url('/fonts/onest-400.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:Onest;src:url('/fonts/onest-500.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:Onest;src:url('/fonts/onest-600.woff2') format('woff2');font-weight:600;font-display:swap}
+:root{--ink:#14253d;--navy:#101f36;--muted:#687384;--red:#c93044;--paper:#fafaf8;--line:#dce0e4;--ease:cubic-bezier(.16,1,.3,1)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Onest,Arial,sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}button,input,select{font:inherit}button,a,select{-webkit-tap-highlight-color:transparent}button{cursor:pointer}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}button{color:inherit}button:focus-visible,a:focus-visible,summary:focus-visible,select:focus-visible{outline:3px solid #478bdc;outline-offset:5px}h1,h2,h3,p{margin:0}h1,h2,h3{font-weight:500;line-height:1.07;letter-spacing:-.045em}.wrap{width:min(1280px,calc(100% - 96px));margin:auto}.section{padding-top:112px;padding-bottom:112px}.eyebrow{font-size:11px;font-weight:600;letter-spacing:.14em;color:#616e7d;line-height:1.6;margin-bottom:23px}.eyebrow.light{color:#d1d9e5}h2{font-size:clamp(38px,4.1vw,58px)}.muted{color:#78818d}.topbar{background:var(--navy);color:#e1e7ed;font-size:11px;letter-spacing:.025em}.topbar-inner{height:36px;display:flex;align-items:center;justify-content:space-between}.topbar-inner>span:first-child{display:flex;align-items:center;gap:10px}.top-sep{margin:0 15px;color:#778497}.flag{display:inline-block;width:22px;height:14px;background:linear-gradient(to bottom,#fff 0 33.33%,#195bb3 33.33% 66.66%,#c63145 66.66%);border-radius:1px}.header{background:#fafaf8f5;backdrop-filter:blur(16px);position:sticky;top:0;z-index:30;border-bottom:1px solid #dce0e466}.header-inner{height:96px;display:flex;align-items:center;justify-content:space-between;gap:30px}.brand img{width:183px;height:auto}.header nav{display:flex;gap:28px;font-size:13px}.header nav a{position:relative;padding:10px 0}.header nav a:after{content:'';position:absolute;left:0;right:100%;height:1px;bottom:5px;background:var(--red);transition:right .3s}.header nav a:hover:after{right:0}.header-phone{font-weight:600;font-size:17px;letter-spacing:-.02em}.header-phone span{display:block;font-size:10px;font-weight:400;letter-spacing:.01em;color:var(--muted);text-align:right;margin-top:2px}.menu-btn{display:none}.hero{position:relative;min-height:650px;height:min(760px,calc(100svh - 132px));overflow:hidden;background:var(--navy);color:white}.hero-photo{position:absolute;right:0;top:0;width:78%;height:100%;object-fit:cover;object-position:62% 45%}.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,#101f36 0%,#101f36f5 23%,#101f36d0 37%,#101f3660 54%,#101f3605 77%),linear-gradient(0deg,#101f3688,transparent 28%)}.hero-content{position:relative;padding-top:73px;z-index:2}.hero-content .eyebrow{font-size:10px;display:flex;align-items:center;gap:14px;letter-spacing:.12em}.small-line{display:inline-block;width:25px;height:2px;background:var(--red)}h1{font-size:clamp(64px,6.7vw,96px);line-height:1.01;font-weight:500;letter-spacing:-.065em;margin:27px 0}.hero-lead{font-size:16px;line-height:1.7;color:#dbe1e9;max-width:480px}.hero-actions{display:flex;align-items:center;gap:28px;margin-top:32px}.btn{display:inline-flex;align-items:center;justify-content:space-between;gap:35px;border:0;border-radius:4px;padding:18px 23px;font-size:13px;font-weight:500;transition:transform .3s var(--ease),background .3s;line-height:1.6}.btn span{font-size:23px;line-height:1}.btn:hover{transform:translateY(-3px)}.red{background:var(--red);color:white}.red:hover{background:#ac2739}.navy{background:var(--navy);color:white}.white{background:white;color:var(--ink)}.hero-link{font-size:13px;display:flex;align-items:center;gap:17px;color:#f2f4f7}.hero-note{margin-top:32px;display:flex;align-items:center;gap:10px;color:#cbd3df;font-size:11px}.hero-note svg{width:19px;height:19px}.photo-tag{position:absolute;right:6%;bottom:116px;border:1px solid #ffffff40;background:#14283b55;backdrop-filter:blur(12px);padding:16px 20px;border-radius:4px;font-size:11px;z-index:2}.photo-tag small{display:block;font-size:10px;color:#e1e7ed;margin:4px 0 0 13px}.tag-dot{width:5px;height:5px;border-radius:50%;background:#fff;display:inline-block;margin-right:8px}.ribbon{position:absolute;width:365px;bottom:-16px;right:-30px;z-index:1}.hero-index{position:absolute;bottom:30px;left:max(48px,calc((100vw - 1280px)/2));font-size:12px;letter-spacing:.1em;color:#fff}.hero-index span{font-size:9px;margin-left:15px;color:#b8c5d5}.trust{display:grid;grid-template-columns:repeat(4,1fr);padding-top:38px;padding-bottom:38px;border-bottom:1px solid var(--line)}.trust>div{padding:0 28px;border-right:1px solid var(--line)}.trust>div:first-child{padding-left:0}.trust>div:last-child{border:0}.trust strong{font-size:27px;letter-spacing:-.04em;font-weight:500}.trust strong span{font-size:22px}.trust p{font-size:11px;color:var(--muted);margin-top:5px}.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;margin-bottom:50px}.section-desc{font-size:13px;line-height:1.8;color:var(--muted);padding-bottom:4px;max-width:360px}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.service{background:#f0f1f2;padding:28px 28px 0;display:flex;flex-direction:column;border-radius:6px;min-height:396px;transition:transform .4s var(--ease),box-shadow .4s}.service:hover{transform:translateY(-5px);box-shadow:0 18px 38px #10213812}.service.feature{background:#e8edf2}.service-top{display:flex;align-items:center;gap:12px;margin-bottom:38px}.service .number{font-size:11px;color:#76808b}.service-label{font-size:9px;letter-spacing:.13em;font-weight:600}.service-top svg{width:41px;height:41px;margin-left:auto;stroke:#456084;stroke-width:1.2;fill:none}.service h3{font-size:31px;letter-spacing:-.04em}.service p{font-size:12px;color:#5a6677;margin-top:15px;line-height:1.8}.service-links{display:flex;flex-wrap:wrap;gap:7px;margin:24px 0 25px}.service-links a,.service-links span{padding:5px 9px;border:1px solid #cdd5df;font-size:10px;border-radius:3px}.service-links a:hover{background:white;border-color:#73859a}.service-cta{display:flex;align-items:center;justify-content:space-between;width:100%;padding:18px 0;border:0;border-top:1px solid #cbd4dd;background:transparent;margin-top:auto;font-size:12px}.service-cta span{font-size:22px}.under-services{display:flex;gap:14px;justify-content:center;font-size:11px;margin-top:28px}.under-services>span{color:var(--muted)}.under-services a{border-bottom:1px solid #a7b2c1}.under-services a span{margin-left:10px}.approach{background:var(--navy);color:#fff;padding:95px 0 100px;position:relative;overflow:hidden}.approach:before{content:'';width:640px;height:640px;position:absolute;left:-420px;bottom:-340px;border:1px solid #ffffff20;border-radius:50%;box-shadow:0 0 0 50px #ffffff03,0 0 0 100px #ffffff03,0 0 0 150px #ffffff02}.approach-grid{display:grid;grid-template-columns:1fr 1fr;gap:110px;position:relative}.approach-title h2{font-size:clamp(43px,4.5vw,65px);line-height:1.06}.approach-title h2 span{color:#93a7c0}.approach-title>p:not(.eyebrow){font-size:13px;color:#bdc9d7;line-height:1.8;max-width:350px;margin-top:26px}.text-link{display:inline-flex;gap:40px;border-bottom:1px solid #6a7b90;padding-bottom:9px;font-size:12px;margin-top:30px}.approach-details article{display:flex;gap:23px;padding:28px 0;border-bottom:1px solid #ffffff25}.approach-details article:first-child{padding-top:12px}.approach-details article:last-child{border:0}.approach-details article>span{font-size:11px;color:#9bacc1;margin-top:5px}.approach-details h3{font-size:23px;letter-spacing:-.035em}.approach-details p{font-size:12px;line-height:1.9;color:#bdc9d7;max-width:350px;margin-top:13px}.calculator{display:grid;grid-template-columns:1.2fr 1fr;background:white;border:1px solid var(--line);border-radius:6px;overflow:hidden}.calc-input{padding:43px 50px}.calc-input h3{font-size:28px;margin-bottom:24px}.segmented{display:flex;padding:4px;background:#eff1f4;border-radius:5px;gap:3px;margin-bottom:27px}.segmented button{flex:1;border:0;background:transparent;font-size:12px;padding:12px 8px;border-radius:3px;white-space:nowrap}.segmented button.active{background:var(--navy);color:#fff;box-shadow:0 2px 5px #11253f15}.calc-input label{display:block;font-size:11px;color:#5b6879;margin:20px 0 7px}.calc-input select{width:100%;min-height:48px;font-size:13px;border:1px solid #cbd2db;border-radius:3px;background:#fff;color:var(--ink);padding:12px}.calc-help{font-size:11px;line-height:1.7;color:#687384;margin-top:24px}.calc-result{background:#eaf0f5;padding:47px 48px;display:flex;flex-direction:column}.calc-result .eyebrow{margin-bottom:10px}.price-value{font-size:20px;letter-spacing:-.04em;white-space:nowrap}.price-value strong{font-size:76px;font-weight:500;line-height:1.2;letter-spacing:-.055em}.price-value>span{font-size:40px}.calc-result>p:not(.eyebrow){font-size:12px;color:#5a687a;margin-top:3px}.calc-result ul{list-style:none;padding:0;margin:28px 0 30px;font-size:12px}.calc-result li{padding:7px 0}.calc-result li:before{content:'✓';color:#466380;margin-right:12px}.calc-result .btn{width:100%;margin-top:auto}.price-source{font-size:11px;text-align:center;margin-top:17px;color:#526278}.business{display:grid;grid-template-columns:1.08fr 1fr;gap:82px;align-items:center}.business-photo{position:relative;align-self:stretch;min-height:560px;overflow:hidden;border-radius:5px}.business-photo img{width:100%;height:100%;object-fit:cover;position:absolute;object-position:43% center}.image-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,#102236bd);padding:85px 25px 25px;color:white;font-size:9px;letter-spacing:.12em}.business-copy{padding:24px 0}.business-copy h2{font-size:56px}.business-copy>p:not(.eyebrow){font-size:13px;color:var(--muted);max-width:380px;line-height:1.8;margin-top:25px}.business-facts{margin:25px 0 30px}.business-facts span{font-size:12px;display:block;border-bottom:1px solid var(--line);padding:11px 0}.business-facts span:before{content:'↗';margin-right:12px;color:#657e9b}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:33px}.steps article{position:relative;border-top:1px solid #bfc8d2;padding-top:23px}.steps article:before{content:'';position:absolute;left:0;top:-3px;width:5px;height:5px;border-radius:50%;background:var(--red)}.steps article>span{font-size:11px;color:#778493}.steps h3{font-size:26px;line-height:1.2;margin:24px 0 15px}.steps p{font-size:12px;color:#637082;line-height:1.8;max-width:230px}.geography{padding:70px 0;background:#eaf0f4}.geo-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.geography h2{font-size:44px}.geography p:not(.eyebrow){font-size:12px;color:#647286;line-height:1.9;margin-top:20px}.cities{display:grid;grid-template-columns:1fr 1fr;gap:0 30px}.cities a{font-size:12px;display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #cbd5e0}.cities a span{color:#75879d}.cities a:hover{color:var(--red)}.faq-section{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px}.faq-aside{font-size:12px;margin-top:25px;color:var(--muted);line-height:2}.faq-aside a{font-size:15px;color:var(--ink)}.faq details{border-bottom:1px solid var(--line)}.faq details:first-child{border-top:1px solid var(--line)}.faq summary{list-style:none;display:flex;align-items:center;justify-content:space-between;padding:24px 0;gap:20px;cursor:pointer;font-size:15px}.faq summary::-webkit-details-marker{display:none}.faq summary span{font-size:25px;font-weight:300;color:#6a7a8c;transition:transform .3s}.faq details[open] summary span{transform:rotate(45deg)}.faq details p{font-size:12px;line-height:1.9;color:#657285;max-width:530px;padding-bottom:25px}.faq details a{text-decoration:underline}.contact{background:var(--navy);color:#fff;padding:67px 0 72px;position:relative}.contact-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:50px;align-items:center}.contact h2{font-size:46px}.contact p:not(.eyebrow){font-size:13px;color:#c0ccda;margin-top:22px;line-height:1.8}.contact-action{display:flex;flex-direction:column;align-items:flex-end}.contact-phone{font-size:31px;letter-spacing:-.04em;margin-bottom:23px;white-space:nowrap}.contact-action .btn{min-width:320px}.contact-form{font-size:11px;color:#c1cddd;margin-top:20px}.tricolor-line{position:absolute;bottom:0;right:0;height:4px;width:35%;display:flex}.tricolor-line i{flex:1;background:white}.tricolor-line i:nth-child(2){background:#2760c5}.tricolor-line i:nth-child(3){background:var(--red)}footer{padding-top:50px;padding-bottom:26px}.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:45px;margin-bottom:42px}.footer-logo{width:163px;height:auto;margin-bottom:15px}.footer-top p{font-size:11px;line-height:1.9;color:var(--muted)}.footer-top h3{font-size:12px;letter-spacing:0;margin:5px 0 17px;font-weight:600}.footer-links{display:flex;flex-direction:column;font-size:11px;gap:15px;margin-top:3px}.footer-bottom{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-top:22px;font-size:9px;color:#647184}.mobile-bar{display:none}.skip{position:fixed;top:-80px;left:12px;background:white;padding:12px;z-index:100}.skip:focus{top:10px}dialog{width:min(520px,calc(100% - 32px));border:0;border-radius:9px;padding:45px;color:var(--ink);box-shadow:0 30px 90px #0005}dialog::backdrop{background:#06162dc0;backdrop-filter:blur(4px)}dialog h2{font-size:37px;line-height:1.15;margin-bottom:20px}dialog p:not(.eyebrow){font-size:13px;line-height:1.8;color:#5b6b7f;margin-bottom:19px}dialog .btn{width:100%;font-size:18px}.dialog-close{position:absolute;right:16px;top:12px;border:0;background:transparent;font-size:30px;width:35px;height:35px}.dialog-link{display:block;text-align:center;font-size:11px;margin-top:21px}.reveal{opacity:1}.will-reveal{opacity:0;transform:translateY(20px);transition:opacity .75s var(--ease),transform .75s var(--ease)}.will-reveal.visible{opacity:1;transform:translateY(0)}
+@media(min-width:1500px){.hero-content{padding-top:94px}.hero-lead{font-size:18px}.hero-actions{margin-top:38px}}
+@media(max-width:1100px){.wrap{width:calc(100% - 56px)}.header-inner{gap:20px;height:84px}.header nav{gap:18px;font-size:12px}.brand img{width:153px}.header-phone{font-size:15px}.hero{height:670px;min-height:620px}.hero-content{padding-top:74px}h1{font-size:72px}.hero-index{left:28px}.hero-photo{width:85%;object-position:60% center}.hero-shade{background:linear-gradient(90deg,#101f36 0%,#101f36ed 26%,#101f3699 48%,#101f3620 80%)}.section{padding:85px 0}.approach-grid{gap:60px}.service{padding:24px 22px 0}.service h3{font-size:27px}.calc-input,.calc-result{padding:35px}.business{gap:45px}.business-copy h2{font-size:46px}.trust strong{font-size:23px}.trust>div{padding:0 18px}.trust p{font-size:10px}.contact-phone{font-size:27px}.contact h2{font-size:38px}.faq-section{gap:50px}}
+@media(max-width:800px){.topbar-inner>span:last-child{display:none}.topbar-inner{justify-content:center;height:30px}.header nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);padding:20px 28px;box-shadow:0 12px 20px #12243a20;flex-direction:column;gap:4px;font-size:16px}.header nav.open{display:flex}.header-inner{height:76px}.menu-btn{display:flex;flex-direction:column;gap:6px;justify-content:center;border:1px solid #d1d7df;background:transparent;border-radius:3px;width:40px;height:40px;padding:10px}.menu-btn span{height:1px;background:var(--ink);width:18px}.header-phone{margin-left:auto;font-size:14px}.header-phone span{font-size:9px}.hero{height:690px}.hero-photo{width:100%;object-position:69% center}.hero-shade{background:linear-gradient(90deg,#101f36f0,#101f36b0 38%,#101f3633 95%),linear-gradient(0deg,#101f36cc,transparent 50%)}.hero-content{padding-top:65px}.hero-content .eyebrow{font-size:8px;letter-spacing:.07em}.hero h1{font-size:67px}.photo-tag{display:none}.hero-lead{font-size:15px}.trust{grid-template-columns:1fr 1fr;gap:26px 0;padding:28px 0}.trust>div{padding-left:20px}.trust>div:nth-child(3){padding-left:0}.trust>div:nth-child(2){border:0}.section-head{gap:24px;flex-direction:column;align-items:flex-start;margin-bottom:34px}.section-desc br{display:none}.section-desc{max-width:500px}.service-grid{gap:12px}.service{padding:20px 16px 0;min-height:415px}.service-top{flex-wrap:wrap;gap:5px;margin-bottom:25px}.service-label{font-size:8px}.service-top svg{width:28px}.service h3{font-size:23px}.service p{font-size:11px}.service p br{display:none}.service-links{gap:5px}.service-links a,.service-links span{font-size:9px;padding:4px 6px}.approach-grid{gap:40px}.approach-title h2{font-size:44px}.approach-details h3{font-size:21px}.approach-details article{gap:15px}.calculator{grid-template-columns:1.05fr 1fr}.calc-input,.calc-result{padding:28px 23px}.calc-input h3{font-size:24px}.segmented button{font-size:10px;padding:10px 3px}.calc-input select{font-size:11px}.price-value strong{font-size:60px}.calc-result li{font-size:10px}.business{gap:30px}.business-copy h2{font-size:40px}.business-photo{min-height:530px}.business-copy .btn{gap:20px;font-size:11px}.steps{grid-template-columns:1fr 1fr;gap:35px}.steps p{max-width:300px}.geo-grid{grid-template-columns:1fr;gap:34px}.cities{grid-template-columns:repeat(3,1fr)}.faq-section{grid-template-columns:1fr;gap:35px}.faq-aside{display:none}.contact-grid{grid-template-columns:1fr;gap:35px}.contact-action{align-items:flex-start}.footer-top{grid-template-columns:1fr 1fr;gap:30px}.footer-bottom{flex-wrap:wrap;font-size:10px}}
+@media(max-width:540px){html{scroll-padding-top:85px}.wrap{width:calc(100% - 40px)}.header-inner{height:70px;gap:12px}.brand img{width:136px}.header-phone{font-size:12px}.header-phone span{font-size:8px}.menu-btn{width:34px;height:34px;padding:8px}.hero{height:780px;min-height:0}.hero-photo{height:55%;top:auto;bottom:0;width:100%;object-position:57% 40%}.hero-shade{background:linear-gradient(180deg,#101f36 0%,#101f36 39%,#101f36f7 46%,#101f3680 58%,#101f3600 73%,#101f36a8 100%)}.hero-content{padding-top:35px}.hero-content .eyebrow{max-width:300px;font-size:7px;gap:7px;letter-spacing:.07em;margin-bottom:18px}.small-line{width:15px;flex-shrink:0}.hero h1{font-size:clamp(43px,11.9vw,64px);margin:16px 0 21px;line-height:1.04;letter-spacing:-.06em}.hero-lead{font-size:12px;line-height:1.8}.hero-actions{margin-top:23px;gap:20px;align-items:center}.hero .btn{font-size:11px;padding:15px 16px;gap:17px}.hero-link{font-size:10px;gap:10px}.hero-note{font-size:9px;margin-top:19px}.hero-note svg{width:17px}.hero-index{left:20px;bottom:23px;font-size:10px}.hero-index span{font-size:7px;letter-spacing:.04em;margin-left:7px}.ribbon{width:190px;right:-25px;bottom:-13px}.trust{padding:25px 0;gap:21px 0}.trust strong{font-size:22px}.trust p{font-size:9px;max-width:150px;line-height:1.65}.trust>div{padding-left:19px;padding-right:10px}.section{padding:65px 0}.eyebrow{font-size:9px;margin-bottom:17px;letter-spacing:.1em}h2{font-size:35px;line-height:1.12}.section-desc{font-size:12px}.service-grid{grid-template-columns:1fr;gap:14px}.service{min-height:0;padding:25px 25px 0}.service-top{margin-bottom:24px;flex-wrap:nowrap;gap:10px}.service-label{font-size:9px}.service-top svg{width:36px;height:36px}.service h3{font-size:31px}.service p{font-size:12px;margin-top:12px}.service-links{margin:22px 0;gap:7px}.service-links a,.service-links span{font-size:10px;padding:5px 9px}.service-cta{padding:15px 0}.under-services{font-size:10px;gap:8px}.approach{padding:60px 0}.approach-grid{grid-template-columns:1fr;gap:40px}.approach-title h2{font-size:42px}.approach-title h2 br:nth-child(2){display:none}.approach-title>p:not(.eyebrow){font-size:12px}.approach-details article{padding:23px 0}.approach-details h3{font-size:23px}.approach-details p{font-size:12px}.calculator{grid-template-columns:1fr}.calc-input{padding:28px 23px}.calc-input h3{font-size:26px}.segmented button{font-size:11px;padding:11px 4px}.calc-input select{font-size:12px}.calc-result{padding:30px 25px}.price-value strong{font-size:68px}.calc-result li{font-size:12px}.calc-result .btn{font-size:12px}.business{grid-template-columns:1fr;gap:30px}.business-photo{min-height:355px;aspect-ratio:1.05}.business-copy{padding:0}.business-copy h2{font-size:42px}.business-copy h2 br:last-child{display:none}.business-copy>p:not(.eyebrow){font-size:12px}.business-copy .btn{font-size:12px}.steps{gap:28px 20px}.steps h3{font-size:23px;margin-top:18px}.steps p{font-size:11px}.geography{padding:50px 0}.geography h2{font-size:34px}.geography p:not(.eyebrow){font-size:12px}.geography p br{display:none}.cities{grid-template-columns:1fr 1fr;gap:0 22px}.cities a{font-size:11px}.faq-section{gap:28px}.faq summary{font-size:13px;padding:20px 0}.faq details p{font-size:12px}.contact{padding:48px 0 50px}.contact h2{font-size:34px}.contact p:not(.eyebrow){font-size:12px}.contact p br{display:none}.contact-grid{gap:27px}.contact-phone{font-size:29px}.contact-action .btn{min-width:0;width:100%;font-size:12px}.contact-form{font-size:10px;align-self:center}.contact-action{width:100%}.footer-top{gap:28px 20px}.footer-top>div:first-child{grid-column:1/-1}.footer-top p{font-size:10px}.footer-links{grid-column:1/-1;flex-direction:row;flex-wrap:wrap;gap:18px}.footer-bottom{font-size:9px;gap:12px}.footer-bottom span:nth-child(2){order:3}.footer-logo{width:153px}footer{padding-bottom:100px}.mobile-bar{position:fixed;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr 1.6fr;background:#fff;z-index:35;padding:9px 12px max(9px,env(safe-area-inset-bottom));gap:8px;box-shadow:0 -4px 24px #11243f15}.mobile-bar a{display:flex;align-items:center;justify-content:center;font-size:11px;padding:13px 5px;border:1px solid #d5dde6;border-radius:3px}.mobile-bar a:last-child{background:var(--red);border-color:var(--red);color:white}dialog{padding:38px 25px}dialog h2{font-size:32px}dialog .btn{font-size:16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}.will-reveal{opacity:1;transform:none}}
+@media print{.header{position:static}.hero{height:670px}.will-reveal{opacity:1;transform:none}.mobile-bar{display:none}body{print-color-adjust:exact;-webkit-print-color-adjust:exact}.section{break-inside:avoid}}
+@media(max-width:540px){.approach-title h2 br:nth-child(2){display:initial}.approach-grid>*,.business>*{min-width:0}.business-photo{aspect-ratio:auto;height:355px;min-height:0;width:100%}.approach-details article>div{min-width:0}.business-copy h2 br:last-child{display:initial}}
+
+/* Главная: добавки к стилям прототипа для работы на сайте —
+   надзаголовок внутри H1, форма заявки в окне, cookie-баннер, подвал. */
+
+/* ── H1: надзаголовок входит в заголовок, вид как в макете ── */
+.hero h1 { margin-top: 0; }
+.hero h1 .eyebrow { display: flex; text-transform: uppercase; margin-bottom: 27px; }
+.h1-line { display: block; }
+@media (max-width: 540px) {
+  .hero h1 { margin-top: 0; }
+  .hero h1 .eyebrow { margin-bottom: 18px; line-height: 1.6; }
+}
+
+/* ── «Оставить заявку» в блоке контактов — теперь кнопка ── */
+button.contact-form { background: none; border: 0; padding: 0; cursor: pointer; text-align: left; }
+button.contact-form:hover { color: #fff; }
+
+/* ── Подвал: юридические ссылки ── */
+.footer-legal { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+.footer-legal a:hover, .footer-links a:hover { color: var(--red); }
+
+/* ── Окно заявки: форма ── */
+.lead-form { margin-top: 4px; }
+.lead-form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.lead-form .field { margin-bottom: 12px; }
+.lead-form .field input {
+  width: 100%; min-height: 50px; padding: 12px 14px; font-size: 15px;
+  border: 1px solid #cbd2db; border-radius: 4px; background: #fff; color: var(--ink);
+}
+.lead-form .field input:focus { outline: 2px solid #478bdc; outline-offset: 1px; border-color: #478bdc; }
+.lead-form .field__error { display: none; font-size: 11px; color: var(--red); margin-top: 5px; }
+.lead-form .field.is-error input { border-color: var(--red); }
+.lead-form .field.is-error .field__error { display: block; }
+.lead-form .check { display: flex; gap: 10px; align-items: flex-start; font-size: 11px; line-height: 1.6; color: #5b6b7f; margin: 4px 0 18px; cursor: pointer; }
+.lead-form .check input { width: 18px; height: 18px; margin: 1px 0 0; flex: 0 0 auto; accent-color: var(--navy); }
+.lead-form .check a { text-decoration: underline; }
+dialog .lead-form .btn { font-size: 15px; }
+.lead-form .form-note { margin: 12px 0 0; font-size: 13px; line-height: 1.6; min-height: 1em; }
+.lead-form .form-note:empty { display: none; }
+.lead-form .form-note.is-ok { color: #1b6b3a; }
+.lead-form .form-note.is-fail { color: var(--red); }
+.lead-form .form-note a { text-decoration: underline; }
+.lead-form.is-sending button[type="submit"] { opacity: .6; pointer-events: none; }
+.dialog-phone { display: block; text-align: center; font-size: 12px; margin-top: 18px; color: #526278; }
+.dialog-phone:hover { color: var(--ink); }
+#booking-context:empty { display: none; }
+
+/* ── Cookie-баннер (разметка общая с остальным сайтом) ── */
+.cookie {
+  position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 90;
+  background: #fff; color: var(--ink); border: 1px solid var(--line); border-radius: 6px;
+  box-shadow: 0 18px 50px #0b182a2e; font-size: 13px;
+}
+.cookie[hidden] { display: none; }
+.cookie__main[hidden], .cookie__settings[hidden] { display: none !important; }
+.cookie__inner { padding: 18px 20px; }
+.cookie__kicker { display: block; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .14em; color: var(--muted); margin-bottom: 8px; }
+.cookie__text p { font-size: 13px; line-height: 1.6; }
+.cookie a { text-decoration: underline; }
+.cookie__muted { margin-top: 2px; font-size: 12px; color: var(--muted); }
+.cookie__actions { display: grid; gap: 8px; margin-top: 14px; }
+.cookie .btn { justify-content: center; gap: 0; padding: 11px 16px; font-size: 13px; border-radius: 3px; }
+.cookie .btn:hover { transform: none; }
+.cookie .btn--navy { background: var(--navy); color: #fff; }
+.cookie .btn--outline { background: #fff; color: var(--ink); border: 1px solid #cbd2db; }
+.cookie__link { background: none; border: 0; padding: 6px; font-size: 12px; color: var(--muted); text-align: center; }
+.cookie__link:hover { color: var(--ink); }
+.cookie__srow { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 12px; }
+.cookie__row { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; border: 1px solid var(--line); border-radius: 4px; padding: 12px 14px; margin-bottom: 8px; }
+.cookie__row strong { font-size: 13px; font-weight: 600; }
+.cookie__badge { flex: 0 0 auto; align-self: center; background: #eaf0f5; color: var(--navy); font-size: 11px; font-weight: 600; border-radius: 3px; padding: 3px 8px; }
+.cookie__switch { position: relative; flex: 0 0 auto; align-self: center; display: inline-block; width: 44px; height: 24px; }
+.cookie__switch input { position: absolute; opacity: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+.cookie__slider { position: absolute; inset: 0; background: #cfd4dd; border-radius: 999px; transition: background .15s; }
+.cookie__slider::before { content: ""; position: absolute; width: 18px; height: 18px; left: 3px; top: 3px; background: #fff; border-radius: 50%; transition: transform .15s; }
+.cookie__switch input:checked + .cookie__slider { background: var(--navy); }
+.cookie__switch input:checked + .cookie__slider::before { transform: translateX(20px); }
+@media (min-width: 620px) {
+  .cookie { left: auto; max-width: 560px; }
+  .cookie__main { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 18px; }
+  .cookie__main .cookie__actions { margin-top: 0; width: 180px; }
+}
+/* на телефоне баннер стоит над нижней панелью звонка */
+@media (max-width: 540px) {
+  .cookie { left: 10px; right: 10px; bottom: calc(76px + env(safe-area-inset-bottom)); }
+}
+
+/* ── Возврат SEO-слоя главной (24.10.2026, _seo/PROSADKA-2026-10-23.md) — в стиле макета ── */
+/* Блок «Служба дезинсекции в ДНР» */
+.seo-about { padding-bottom: 0; }
+.seo-about .section-desc { max-width: 470px; }
+.seo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 64px; }
+.seo-grid article { border-top: 1px solid var(--line); padding: 26px 0 30px; }
+.seo-grid h3 { font-size: 23px; letter-spacing: -.035em; margin-bottom: 13px; }
+.seo-grid p { font-size: 12px; line-height: 1.9; color: #657285; }
+.seo-grid a { color: var(--ink); text-decoration: underline; text-decoration-color: #a7b2c1; text-underline-offset: 3px; }
+.seo-grid a:hover { color: var(--red); text-decoration-color: currentColor; }
+@media (max-width: 800px) { .seo-grid { grid-template-columns: 1fr; } }
+@media (max-width: 540px) { .seo-grid h3 { font-size: 21px; } }
+
+/* Подвал: все услуги и города */
+.footer-nav { display: grid; grid-template-columns: 2fr 1fr; gap: 45px; border-top: 1px solid var(--line); padding-top: 32px; margin-bottom: 36px; }
+.footer-nav h3 { font-size: 12px; letter-spacing: 0; margin: 0 0 17px; font-weight: 600; }
+.footer-nav ul { list-style: none; margin: 0; padding: 0; columns: 3; column-gap: 30px; font-size: 11px; line-height: 1.5; }
+.footer-nav div:last-child ul { columns: 2; }
+.footer-nav li { break-inside: avoid; padding-bottom: 10px; }
+.footer-nav a { color: var(--muted); }
+.footer-nav a:hover, .footer-nav h3 a:hover { color: var(--red); }
+.footer-nav h3 a { color: var(--ink); }
+@media (max-width: 800px) { .footer-nav { grid-template-columns: 1fr; gap: 26px; } .footer-nav ul { columns: 2; } }
+
+/* Обвязка внутренних страниц (с 12.10.2026): шапка с меню услуг и выбором города, подвал, окно заявки.
+   Перенесено из site.css без изменений. Вёрстка самих страниц — styles/pages.css. */
+.site { --gut: max(48px, calc((100vw - 1280px) / 2)); overflow-x: clip; }
+.site .container { width: min(1280px, calc(100% - 96px)); margin: auto; }
+
+/* ── Окно «Обсудим обработку» на внутренних страницах ── */
+.modal { position: fixed; inset: 0; z-index: 100; display: none; place-items: center; padding: 16px; }
+.modal.is-open { display: grid; }
+.modal__backdrop { position: absolute; inset: 0; background: #06162dc0; backdrop-filter: blur(4px); }
+.modal__dialog { position: relative; width: min(520px, 100%); max-height: calc(100vh - 32px); overflow-y: auto; background: #fff; color: var(--ink); border-radius: 9px; padding: 45px; box-shadow: 0 30px 90px #0005; }
+.modal__close { position: absolute; right: 16px; top: 12px; border: 0; background: transparent; font-size: 30px; width: 35px; height: 35px; line-height: 1; }
+.modal .modal__title { font-size: 37px; line-height: 1.15; margin-bottom: 18px; }
+.modal__lead { font-size: 13px; line-height: 1.8; color: #5b6b7f; margin-bottom: 19px; }
+.modal .lead-form .btn { width: 100%; font-size: 15px; }
+body.has-modal-open { overflow: hidden; }
+
+/* поля формы в окне */
+.modal .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.modal .field { margin-bottom: 12px; }
+.modal .field input { width: 100%; min-height: 52px; padding: 13px 15px; font-size: 15px; border: 1px solid #cbd2db; border-radius: 4px; background: #fff; color: var(--ink); }
+.modal .field input:focus { outline: 2px solid #478bdc; outline-offset: 1px; border-color: #478bdc; }
+.modal .field__error { display: none; font-size: 11px; color: var(--red); margin-top: 5px; }
+.modal .field.is-error input { border-color: var(--red); }
+.modal .field.is-error .field__error { display: block; }
+.modal .cta__form.is-sending button[type="submit"] { opacity: .6; pointer-events: none; }
+
+/* ── Шапка внутренних страниц: меню с услугами ── */
+.topbar-geo { position: relative; }
+.geo-toggle { border: 0; background: transparent; color: #fff; font-size: 11px; padding: 4px 0 4px 14px; margin-left: 6px; border-left: 1px solid #ffffff33; }
+.geo-toggle:hover { color: #ffb3bd; }
+.geo-list { position: absolute; z-index: 40; top: calc(100% + 10px); left: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 26px; width: 380px; padding: 18px 22px; background: #fff; color: var(--ink); border-radius: 6px; box-shadow: 0 20px 50px #0b182a33; font-size: 13px; }
+.geo-list[hidden] { display: none; }
+.geo-list a { padding: 8px 0; border-bottom: 1px solid var(--line); }
+.geo-list a:hover { color: var(--red); }
+.geo-list__all { grid-column: 1 / -1; border-bottom: 0 !important; font-weight: 500; padding-top: 12px !important; }
+
+.site-header .site-nav { display: block; font-size: 13px; }
+.site-header .nav__list { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: 26px; }
+.site-header .nav__item { position: relative; }
+.site-header .nav__link { position: relative; display: inline-flex; align-items: center; gap: 6px; padding: 10px 0; }
+.site-header .nav__link::after { content: ''; position: absolute; left: 0; right: 100%; height: 1px; bottom: 5px; background: var(--red); transition: right .3s; }
+.site-header .nav__link:hover::after, .site-header .nav__item:focus-within > .nav__link::after { right: 0; }
+.site-header .nav__caret { font-size: 9px; color: var(--muted); }
+.site-header .mega { position: absolute; top: calc(100% + 18px); left: -28px; z-index: 40; display: grid; grid-template-columns: repeat(3, minmax(190px, 1fr)); gap: 0 34px; width: max-content; max-width: min(820px, calc(100vw - 48px)); padding: 28px 30px 26px; background: #fff; border-radius: 6px; box-shadow: 0 24px 60px #0b182a2e; opacity: 0; visibility: hidden; transform: translateY(8px); transition: opacity .25s, transform .25s var(--ease), visibility .25s; }
+.site-header .mega::before { content: ''; position: absolute; left: 0; right: 0; top: -20px; height: 20px; }
+.site-header .nav__item.has-children:hover > .mega, .site-header .nav__item.has-children:focus-within > .mega { opacity: 1; visibility: visible; transform: none; }
+.site-header .mega__title { font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #616e7d; margin-bottom: 10px; }
+.site-header .mega a { display: block; padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 13px; white-space: nowrap; }
+.site-header .mega a::after { display: none; }
+.site-header .mega a:hover { color: var(--red); }
+.site-header .mega .mega__all { border-bottom: 0; margin-top: 10px; font-weight: 500; }
+
+/* ── Подвал внутренних страниц ── */
+.site-footer .footer-phone { display: inline-block; font-size: 18px; font-weight: 500; letter-spacing: -.02em; margin-top: 14px; }
+.site-footer .footer-cta { border: 0; background: none; padding: 0; margin-top: 14px; font-size: 11px; border-bottom: 1px solid #a7b2c1; padding-bottom: 4px; }
+.site-footer .footer-cta:hover, .site-footer .footer-phone:hover { color: var(--red); }
+.site-footer .footer-cities { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 11px; color: var(--muted); padding: 22px 0; border-top: 1px solid var(--line); }
+.site-footer .footer-cities span { color: var(--ink); font-weight: 500; }
+.site-footer .footer-cities a:hover { color: var(--red); }
+
+@media (max-width: 1100px) {
+  .site { --gut: 28px; }
+  .site .container { width: calc(100% - 56px); }
+  .site-header .nav__list { gap: 18px; }
+  .site-header .site-nav { font-size: 12px; }
+}
+@media (max-width: 992px) {
+  .site-header .site-nav { display: none; position: absolute; top: 100%; left: 0; right: 0; max-height: calc(100vh - 110px); overflow-y: auto; background: var(--paper); padding: 10px 28px 24px; box-shadow: 0 12px 20px #12243a20; }
+  .site-header.is-open .site-nav { display: block; }
+  .site-header .nav__list { flex-direction: column; align-items: stretch; gap: 0; }
+  .site-header .nav__link { display: flex; justify-content: space-between; padding: 14px 0; font-size: 16px; border-bottom: 1px solid var(--line); }
+  .site-header .nav__link::after { display: none; }
+  .site-header .mega { position: static; display: none; width: auto; max-width: none; grid-template-columns: 1fr; padding: 6px 0 14px 14px; box-shadow: none; background: transparent; opacity: 1; visibility: visible; transform: none; transition: none; }
+  .site-header .mega::before { display: none; }
+  .site-header .nav__item.has-children:hover > .mega { display: none; }
+  .site-header .nav__item.is-open > .mega, .site-header .nav__item.is-open:hover > .mega { display: grid; }
+  .site-header .nav__item.is-open .nav__caret { transform: rotate(180deg); }
+  .site-header .mega__title { margin: 12px 0 4px; }
+  .site-header .mega a { font-size: 15px; white-space: normal; }
+  .site-header .burger { display: flex; flex-direction: column; gap: 6px; justify-content: center; border: 1px solid #d1d7df; background: transparent; border-radius: 3px; width: 40px; height: 40px; padding: 10px; }
+  .site-header .burger span { height: 1px; background: var(--ink); width: 18px; }
+  .site-header .header-phone { margin-left: auto; }
+  body.has-menu-open { overflow: hidden; }
+}
+@media (max-width: 800px) {
+  .geo-list { width: min(340px, calc(100vw - 40px)); left: 50%; transform: translateX(-50%); }
+  .site-footer .footer-top { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 540px) {
+  .site { --gut: 20px; }
+  .site .container { width: calc(100% - 40px); }
+  .site-footer .footer-top { grid-template-columns: 1fr 1fr; }
+  .site-footer .footer-cities { font-size: 12px; }
+  .modal__dialog { padding: 38px 25px; }
+  .modal .modal__title { font-size: 32px; }
+}
+@media (prefers-reduced-motion: reduce) { .site-header .mega { transition: none; } }
+.site .footer-top h3 { font-size: 12px; line-height: 1.07; letter-spacing: 0; margin: 5px 0 17px; font-weight: 600; }
+body.has-menu-open .mobile-bar { display: none; }
+
+/* Внутренние страницы в дизайне главной (12.10.2026). Вёрстка — lib/render.js.
+   Основа — компоненты главной (home.css): hero, trust, section-head, calculator, business, approach,
+   faq-section, service-grid, geography, contact. Здесь — их настройка для внутренних страниц
+   и недостающие блоки (таблицы цен, статья с оглавлением, карточки, контакты, работы, документы). */
+
+.site .section { padding-top: 96px; padding-bottom: 96px; }
+
+/* ── Хлебные крошки ── */
+.pg-crumbs ol { list-style: none; margin: 0 0 40px; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 0; font-size: 11px; color: var(--muted); }
+.pg-crumbs li { display: inline-flex; align-items: center; }
+.pg-crumbs li + li::before { content: '/'; margin: 0 10px; color: #a8b1bd; }
+.pg-crumbs a:hover { color: var(--red); }
+.pg-crumbs [aria-current] { color: var(--ink); }
+.pg-crumbs--light ol { color: #aebbcc; margin-bottom: 34px; }
+.pg-crumbs--light li + li::before { color: #6f8096; }
+.pg-crumbs--light a:hover { color: #fff; }
+.pg-crumbs--light [aria-current] { color: #fff; }
+
+/* ── Первый экран услуги, гео и города ── */
+.pg-hero { height: auto; min-height: 660px; }
+.pg-hero .hero-content { padding-top: 40px; padding-bottom: 120px; }
+.pg-hero h1 { font-size: clamp(46px, 5.4vw, 84px); line-height: 1.02; letter-spacing: -.06em; margin: 22px 0 24px; max-width: 860px; }
+.pg-hero .hero-lead { max-width: 540px; }
+.pg-hero .hero-lead a { text-decoration: underline; }
+
+/* ── Шапка страницы без героя ── */
+.pg-head { padding-top: 34px; padding-bottom: 60px; border-bottom: 1px solid var(--line); }
+.pg-head .pg-crumbs ol { margin-bottom: 48px; }
+.pg-head-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 64px; align-items: end; }
+.pg-head .eyebrow { display: flex; align-items: center; gap: 14px; font-size: 10px; letter-spacing: .12em; margin-bottom: 26px; color: #616e7d; }
+.pg-head h1 { font-size: clamp(50px, 6.2vw, 96px); line-height: 1; letter-spacing: -.065em; margin: 0; }
+.pg-head-side { font-size: 15px; line-height: 1.85; color: #4d5a6c; padding-bottom: 6px; }
+.pg-head-side p { margin: 0 0 14px; }
+.pg-head-side p:last-child { margin-bottom: 0; }
+.pg-head-side a { text-decoration: underline; text-decoration-color: #a7b2c1; text-underline-offset: 3px; }
+.pg-big { font-size: 19px; line-height: 1.6; color: var(--ink); font-weight: 500; letter-spacing: -.01em; }
+
+/* ── Цены: карточка как калькулятор главной ── */
+.pg-prices { scroll-margin-top: 100px; }
+.calculator.pg-price-card { grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr); }
+.pg-price-card .calc-input { padding: 34px 36px 38px; }
+.pg-tabs { flex-wrap: wrap; }
+.segmented.pg-tabs button.is-active { background: var(--navy); color: #fff; box-shadow: 0 2px 5px #11253f15; }
+.pg-panel[hidden] { display: none; }
+.site .table-wrap { border: 1px solid var(--line); border-radius: 5px; overflow-x: auto; -webkit-overflow-scrolling: touch; background: #fff; }
+.site .price-table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 560px; }
+.site .price-table th, .site .price-table td { text-align: left; padding: 15px 18px; border-top: 1px solid var(--line); vertical-align: middle; }
+.site .price-table thead th { border-top: 0; background: #f4f6f8; font-size: 9px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #5b6879; line-height: 1.5; }
+.site .price-table tbody th { font-weight: 500; color: var(--ink); }
+.site .price-table td { font-size: 16px; font-weight: 500; letter-spacing: -.02em; white-space: nowrap; }
+.site .price-table tbody tr:last-child th, .site .price-table tbody tr:last-child td { font-size: 12px; font-weight: 400; color: var(--muted); letter-spacing: 0; }
+.site .price-table tbody tr:hover { background: #f8f9fa; }
+.pg-price-card .calc-result > p:not(.eyebrow) { margin-top: 6px; }
+
+/* ── «Подробно»: фото + текст, как блок «Бизнесу» ── */
+.pg-about { padding-top: 96px; padding-bottom: 96px; }
+.pg-about .business-copy h2 { font-size: clamp(34px, 3.4vw, 50px); }
+.pg-about .business-copy > p:not(.eyebrow) { font-size: 15px; line-height: 1.85; color: #3d4a5c; max-width: none; margin-top: 18px; }
+.pg-about .business-copy a, .pg-text-cols a { text-decoration: underline; text-decoration-color: #a7b2c1; text-underline-offset: 3px; }
+.pg-about .business-copy a:hover, .pg-text-cols a:hover { color: var(--red); }
+.pg-text-cols { columns: 2 340px; column-gap: 64px; font-size: 15px; line-height: 1.85; color: #3d4a5c; }
+.pg-text-cols p { margin: 0 0 16px; break-inside: avoid; }
+
+/* ── Порядок работы: тёмный блок, как «Подход к работе» ── */
+.pg-approach .approach-title { align-self: start; position: sticky; top: 130px; }
+.pg-approach .approach-title h2 { font-size: clamp(40px, 4.2vw, 62px); }
+.pg-approach .approach-details h3 { font-size: 23px; }
+.pg-approach .approach-details p { font-size: 14px; line-height: 1.85; max-width: 480px; }
+.pg-approach .approach-details a { text-decoration: underline; }
+.pg-text-link { background: none; border: 0; border-bottom: 1px solid #6a7b90; color: #fff; padding: 0 0 9px; cursor: pointer; }
+.pg-text-link:hover { border-color: #fff; }
+
+/* ── Текст статьи и «Важно знать» ── */
+.pg-rich { font-size: 17px; line-height: 1.8; color: #2f3b4d; }
+.pg-rich > *:first-child { margin-top: 0; }
+.pg-rich p { margin: 0 0 20px; }
+.pg-rich h2 { font-size: clamp(28px, 2.6vw, 38px); line-height: 1.12; letter-spacing: -.045em; color: var(--ink); margin: 56px 0 20px; scroll-margin-top: 120px; }
+.pg-rich h3 { font-size: 23px; line-height: 1.25; letter-spacing: -.03em; color: var(--ink); margin: 36px 0 14px; }
+.pg-rich ul, .pg-rich ol { margin: 0 0 24px; padding: 0; list-style: none; }
+.pg-rich li { position: relative; padding: 11px 0 11px 30px; border-bottom: 1px solid var(--line); }
+.pg-rich li:last-child { border-bottom: 0; }
+.pg-rich ul li::before { content: ''; position: absolute; left: 2px; top: 23px; width: 10px; height: 2px; background: var(--red); }
+.pg-rich ol { counter-reset: n; }
+.pg-rich ol li { counter-increment: n; }
+.pg-rich ol li::before { content: counter(n, decimal-leading-zero); position: absolute; left: 0; top: 14px; font-size: 11px; color: #778493; }
+.pg-rich a { text-decoration: underline; text-decoration-color: #a7b2c1; text-underline-offset: 3px; }
+.pg-rich a:hover { color: var(--red); text-decoration-color: currentColor; }
+.pg-rich strong, .pg-rich b { font-weight: 600; color: var(--ink); }
+.pg-extra-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 80px; }
+.pg-extra .pg-rich { font-size: 16px; }
+.pg-extra .pg-rich h3 { font-size: clamp(28px, 2.8vw, 40px); letter-spacing: -.045em; line-height: 1.1; margin-bottom: 24px; }
+
+/* ── Вопросы ── */
+.pg-faq h2 { font-size: clamp(38px, 4vw, 58px); }
+.pg-faq .faq summary { font-size: 17px; font-weight: 500; letter-spacing: -.02em; line-height: 1.4; }
+.pg-faq-a { padding-bottom: 24px; }
+.pg-faq .faq details p { font-size: 15px; line-height: 1.85; color: #556275; max-width: 640px; padding: 0; margin: 0 0 10px; }
+.pg-faq .faq details a { text-decoration: underline; }
+
+/* ── Смежные услуги: карточки ── */
+.pg-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+.pg-card { display: flex; flex-direction: column; gap: 22px; min-height: 236px; padding: 24px 24px 0; background: #f0f1f2; border-radius: 6px; transition: transform .4s var(--ease), box-shadow .4s, background .3s; }
+.pg-card:first-child { background: #e8edf2; }
+.pg-card:hover { transform: translateY(-5px); box-shadow: 0 18px 38px #10213812; }
+.pg-card__top { display: flex; align-items: center; justify-content: space-between; }
+.pg-card__num { font-size: 11px; color: #76808b; }
+.pg-card__icon { width: 42px; height: 42px; color: #456084; }
+.pg-card__icon svg { width: 100%; height: 100%; }
+.pg-card__title { font-size: 25px; font-weight: 500; letter-spacing: -.04em; line-height: 1.12; margin-top: auto; }
+.pg-card__go { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #cbd4dd; padding: 16px 0; font-size: 12px; }
+.pg-card__go span { font-size: 20px; line-height: 1; }
+.pg-sub { margin-top: 48px; }
+.pg-sub .eyebrow { margin-bottom: 12px; }
+.pg-rows a { display: flex; justify-content: space-between; gap: 20px; padding: 15px 0; border-bottom: 1px solid #cbd5e0; font-size: 15px; }
+.pg-rows a:first-child { border-top: 1px solid #cbd5e0; }
+.pg-rows a span { color: #75879d; }
+.pg-rows a:hover { color: var(--red); }
+.service-links.pg-chips { margin: 0; gap: 8px; }
+.service-links.pg-chips a { font-size: 12px; padding: 8px 12px; }
+
+/* ── Направления (города, услуги): карточки главной ── */
+.pg-directions .service { min-height: 0; }
+.pg-dir-title { font-size: 31px; line-height: 1.07; letter-spacing: -.04em; font-weight: 500; }
+.pg-dir-list { margin: 22px 0 20px; }
+.pg-dir-list a { display: flex; justify-content: space-between; gap: 12px; padding: 11px 0; border-bottom: 1px solid #cbd4dd; font-size: 13px; }
+.pg-dir-list a:first-child { border-top: 1px solid #cbd4dd; }
+.pg-dir-list a span { color: #73859a; }
+.pg-dir-list a:hover { color: var(--red); }
+.pg-directions .service-links { margin-top: 0; }
+
+/* ── Города: блок «Вся республика» ── */
+.pg-geo h2 { font-size: clamp(34px, 3.6vw, 50px); }
+.pg-geo p:not(.eyebrow) { font-size: 14px; }
+.pg-geo .cities a { font-size: 13px; gap: 14px; }
+
+/* ── Заявка: тёмный блок с формой ── */
+.pg-contact .contact-grid { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: start; gap: 64px; }
+.pg-contact h2 { font-size: clamp(36px, 3.8vw, 54px); }
+.pg-contact .contact-phone { display: inline-block; margin-top: 30px; }
+.pg-form { position: relative; }
+.pg-form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.pg-form .field { margin-bottom: 12px; }
+.pg-form .field input { width: 100%; min-height: 54px; padding: 14px 16px; font-size: 15px; border: 1px solid #ffffff38; border-radius: 4px; background: #ffffff10; color: #fff; }
+.pg-form .field input::placeholder { color: #9fb0c4; }
+.pg-form .field input:focus { outline: 2px solid #478bdc; outline-offset: 1px; border-color: #478bdc; background: #ffffff1a; }
+.pg-form .field__error { display: none; font-size: 11px; color: #ff9aa6; margin-top: 5px; }
+.pg-form .field.is-error input { border-color: #ff6b7d; }
+.pg-form .field.is-error .field__error { display: block; }
+.pg-check { display: flex; gap: 12px; align-items: flex-start; font-size: 11px; line-height: 1.6; color: #c0ccda; margin: 6px 0 18px; cursor: pointer; }
+.pg-check input { width: 18px; height: 18px; margin: 1px 0 0; flex: 0 0 auto; accent-color: var(--red); }
+.pg-check a { text-decoration: underline; }
+.pg-form .btn { width: 100%; font-size: 15px; }
+.pg-contact .pg-form .form-note { margin: 12px 0 0; font-size: 13px; line-height: 1.6; color: #c0ccda; }
+.pg-contact .pg-form .form-note:empty { display: none; }
+.pg-contact .pg-form .form-note.is-ok { color: #9be2b4; }
+.pg-contact .pg-form .form-note.is-fail { color: #ff9aa6; }
+.pg-contact .pg-form .form-note a { text-decoration: underline; color: #fff; }
+.pg-form.is-sending button[type="submit"] { opacity: .6; pointer-events: none; }
+
+/* ── Статья блога ── */
+.pg-post-head { padding-top: 34px; padding-bottom: 44px; }
+.pg-post-head .pg-crumbs ol { margin-bottom: 40px; }
+.pg-post-meta { display: flex; align-items: center; gap: 16px; font-size: 12px; color: var(--muted); margin-bottom: 26px; }
+.pg-post-cat { font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--ink); border: 1px solid #cdd5df; border-radius: 3px; padding: 5px 9px; }
+.pg-post-head h1 { font-size: clamp(40px, 4.8vw, 74px); line-height: 1.03; letter-spacing: -.06em; margin: 0 0 28px; max-width: 1040px; }
+.pg-post-head .pg-big { max-width: 780px; color: #3d4a5c; font-weight: 400; font-size: 19px; line-height: 1.7; }
+.pg-post-figure picture { display: block; }
+.pg-post-figure img { width: 100%; height: clamp(240px, 40vw, 560px); object-fit: cover; border-radius: 6px; }
+.pg-post-body { display: grid; grid-template-columns: 270px minmax(0, 1fr); gap: 84px; padding-top: 72px; padding-bottom: 24px; align-items: start; }
+.pg-toc { position: sticky; top: 120px; font-size: 13px; }
+.pg-toc ol { list-style: none; margin: 0 0 28px; padding: 0; counter-reset: t; }
+.pg-toc li { counter-increment: t; }
+.pg-toc a { display: grid; grid-template-columns: 30px 1fr; padding: 10px 0; border-bottom: 1px solid var(--line); line-height: 1.45; }
+.pg-toc a::before { content: counter(t, decimal-leading-zero); font-size: 10px; color: #778493; padding-top: 3px; }
+.pg-toc a:hover { color: var(--red); }
+.pg-toc-cta { background: #eaf0f5; border-radius: 6px; padding: 22px; }
+.pg-toc-cta p { font-weight: 500; margin-bottom: 6px; }
+.pg-toc-cta a { display: block; font-size: 18px; font-weight: 600; letter-spacing: -.02em; margin-bottom: 16px; }
+.pg-toc-cta .btn { width: 100%; font-size: 12px; padding: 14px 16px; gap: 10px; }
+.pg-article { max-width: 760px; }
+.pg-more { padding-bottom: 80px; }
+
+/* ── Список статей ── */
+.pg-blog { padding-top: 44px !important; }
+.pg-blog-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 44px; }
+.pg-blog .pg-tabs { margin: 0; max-width: 100%; }
+.pg-blog .pg-tabs button { flex: 0 0 auto; padding: 10px 14px; font-size: 12px; }
+.blog-tabs__count { font-size: 10px; color: var(--muted); margin-left: 4px; }
+.pg-tabs button.is-active .blog-tabs__count { color: #b8c5d5; }
+.pg-blog-note { font-size: 12px; color: var(--muted); }
+.pg-posts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 52px 28px; }
+.pg-post-card { display: flex; flex-direction: column; gap: 12px; }
+.pg-post-card[hidden] { display: none; }
+.pg-post-card__img { display: block; overflow: hidden; border-radius: 6px; aspect-ratio: 3 / 2; margin-bottom: 8px; background: #eaf0f5; }
+.pg-post-card__img picture, .pg-post-card__img img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.pg-post-card__img img { transition: transform .6s var(--ease); }
+.pg-post-card:hover img { transform: scale(1.04); }
+.pg-post-card .post-card__cat { font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #616e7d; }
+.pg-post-card__title { font-size: 22px; font-weight: 500; line-height: 1.2; letter-spacing: -.04em; }
+.pg-post-card:hover .pg-post-card__title { color: var(--red); }
+.pg-post-card__lead { font-size: 13px; line-height: 1.75; color: var(--muted); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.pg-post-card__go { font-size: 12px; border-top: 1px solid var(--line); padding-top: 12px; margin-top: auto; }
+
+/* ── Контакты, работы, города, принципы, этапы ── */
+.pg-contacts-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.pg-contact-card { background: #eaf0f5; border-radius: 6px; padding: 34px 32px 30px; }
+.pg-contact-card:first-child { background: var(--navy); color: #fff; }
+.pg-contact-card:first-child .eyebrow { color: #d1d9e5; }
+.pg-contact-value { font-size: 26px; font-weight: 500; letter-spacing: -.04em; line-height: 1.3; }
+.pg-contact-value a:hover { color: var(--red); }
+.pg-contact-card small { display: block; font-size: 12px; color: var(--muted); margin-top: 10px; }
+.pg-works-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.business-photo.pg-work { min-height: 0; aspect-ratio: 4 / 5; margin: 0; }
+.pg-city-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.pg-city { position: relative; display: flex; flex-direction: column; gap: 10px; min-height: 196px; padding: 24px 26px; background: #f0f1f2; border-radius: 6px; transition: transform .4s var(--ease), box-shadow .4s; }
+.pg-city:hover { transform: translateY(-5px); box-shadow: 0 18px 38px #10213812; }
+.pg-city__num { font-size: 11px; color: #76808b; }
+.pg-city__name { font-size: 30px; font-weight: 500; letter-spacing: -.045em; line-height: 1.05; margin-top: auto; }
+.pg-city__note { font-size: 12px; color: var(--muted); }
+.pg-city__go { position: absolute; top: 20px; right: 24px; font-size: 20px; color: #73859a; }
+.pg-city:hover .pg-city__go { color: var(--red); }
+.pg-adv-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.pg-adv-card { background: #f0f1f2; border-radius: 6px; padding: 28px 28px 30px; }
+.pg-adv-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+.pg-adv-num { font-size: 11px; color: #76808b; }
+.pg-adv-icon { width: 40px; height: 40px; color: #456084; }
+.pg-adv-icon svg { width: 100%; height: 100%; }
+.pg-adv-card h3 { font-size: 25px; letter-spacing: -.04em; line-height: 1.15; margin-bottom: 14px; }
+.pg-adv-card p { font-size: 14px; line-height: 1.8; color: var(--muted); }
+.pg-steps-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 72px; align-items: start; }
+.business-photo.pg-steps-photo { min-height: 540px; position: sticky; top: 120px; }
+.pg-steps-list article { position: relative; display: grid; grid-template-columns: 84px minmax(0, 1fr); gap: 16px; padding: 26px 0; border-top: 1px solid #bfc8d2; }
+.pg-steps-list article::before { content: ''; position: absolute; left: 0; top: -3px; width: 5px; height: 5px; border-radius: 50%; background: var(--red); }
+.pg-steps-list article > span { font-size: 10px; font-weight: 600; letter-spacing: .12em; color: #778493; padding-top: 8px; }
+.pg-steps-list h3 { font-size: 24px; letter-spacing: -.035em; line-height: 1.2; margin-bottom: 10px; }
+.pg-step-text, .pg-step-text p { font-size: 14px; line-height: 1.8; color: #637082; }
+
+/* ── Документы ── */
+.pg-doc-wrap { padding-top: 34px; padding-bottom: 96px; }
+.pg-doc { max-width: 860px; font-size: 15px; line-height: 1.8; color: #3d4a5c; }
+.pg-doc h1 { font-size: clamp(36px, 4.4vw, 62px); line-height: 1.05; letter-spacing: -.055em; color: var(--ink); margin: 0 0 22px; }
+.pg-doc h2 { font-size: 24px; letter-spacing: -.03em; color: var(--ink); margin: 44px 0 14px; }
+.pg-doc h3 { font-size: 18px; color: var(--ink); margin: 28px 0 10px; }
+.pg-doc p { margin: 0 0 14px; }
+.pg-doc .lead { font-size: 19px; color: var(--ink); line-height: 1.6; }
+.pg-doc .t-muted { color: var(--muted); }
+.pg-doc ul, .pg-doc ol { margin: 0 0 16px; padding-left: 22px; }
+.pg-doc li { margin-bottom: 6px; }
+.pg-doc a { text-decoration: underline; text-decoration-color: #a7b2c1; text-underline-offset: 3px; }
+.pg-doc table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 10px 0 20px; }
+.pg-doc th, .pg-doc td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; }
+
+/* ── Адаптив ── */
+@media (max-width: 1100px) {
+  .site .section, .pg-about { padding-top: 80px; padding-bottom: 80px; }
+  .pg-head-grid { gap: 40px; }
+  .pg-post-body { gap: 56px; grid-template-columns: 230px minmax(0, 1fr); }
+  .pg-city-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 992px) {
+  .calculator.pg-price-card { grid-template-columns: minmax(0, 1fr); }
+  .pg-post-body { grid-template-columns: 1fr; }
+  .pg-toc { position: static; }
+  .pg-steps-grid { grid-template-columns: 1fr; gap: 36px; }
+  .business-photo.pg-steps-photo { position: relative; top: 0; min-height: 360px; }
+  .pg-extra-grid { grid-template-columns: 1fr; gap: 10px; }
+  .pg-posts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pg-approach .approach-title { position: static; }
+}
+@media (max-width: 800px) {
+  .pg-hero { min-height: 0; }
+  .pg-head-grid { grid-template-columns: 1fr; gap: 26px; align-items: start; }
+  .pg-head h1 { font-size: clamp(44px, 11vw, 72px); }
+  .pg-contact .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+  .pg-contacts-grid, .pg-adv-grid { grid-template-columns: 1fr; }
+  .pg-works-grid, .pg-city-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pg-geo .cities { grid-template-columns: 1fr 1fr; }
+  .pg-toc ol { display: none; }
+  .pg-toc .eyebrow { display: none; }
+}
+@media (max-width: 540px) {
+  .site .section, .pg-about { padding-top: 60px; padding-bottom: 60px; }
+  .pg-hero .hero-content { padding-top: 22px; padding-bottom: 290px; }
+  .pg-hero .hero-photo { height: 270px; top: auto; bottom: 0; width: 100%; object-position: 55% 40%; }
+  .pg-hero .hero-shade { background: linear-gradient(180deg, #101f36 0, #101f36 calc(100% - 280px), #101f36b0 calc(100% - 230px), #101f3600 calc(100% - 120px), #101f3699 100%); }
+  .pg-hero h1 { font-size: clamp(36px, 10.6vw, 52px); margin: 16px 0 18px; }
+  .pg-crumbs ol, .pg-crumbs--light ol { margin-bottom: 24px; }
+  .pg-hero .hero-actions { flex-wrap: wrap; }
+  .pg-head { padding-bottom: 44px; }
+  .pg-head .pg-crumbs ol { margin-bottom: 30px; }
+  .pg-price-card .calc-input { padding: 22px 16px 24px; }
+  .segmented.pg-tabs { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+  .segmented.pg-tabs::-webkit-scrollbar { display: none; }
+  .segmented.pg-tabs button { flex: 0 0 auto; padding: 11px 12px; }
+  .pg-about .business-copy > p:not(.eyebrow) { font-size: 15px; }
+  .pg-text-cols { columns: 1; }
+  .pg-card { min-height: 200px; }
+  .pg-card__title { font-size: 22px; }
+  .pg-dir-title { font-size: 27px; }
+  .pg-geo .cities { grid-template-columns: 1fr; }
+  .pg-rich { font-size: 16px; }
+  .pg-rich h2 { margin-top: 44px; }
+  .pg-post-figure img { border-radius: 4px; }
+  .pg-post-body { padding-top: 44px; }
+  .pg-posts { grid-template-columns: 1fr; gap: 40px; }
+  .pg-blog .pg-tabs { flex-wrap: nowrap; overflow-x: auto; }
+  .pg-works-grid { grid-template-columns: 1fr; }
+  .pg-city-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .pg-city { min-height: 150px; padding: 18px; }
+  .pg-city__name { font-size: 22px; }
+  .pg-contact-value { font-size: 22px; }
+  .pg-steps-list article { grid-template-columns: 1fr; gap: 6px; }
+  .pg-faq .faq summary { font-size: 15px; }
+  .pg-faq .faq details p { font-size: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pg-card, .pg-city, .pg-post-card__img img { transition: none; }
+}
+
+/* вводный текст города — справа от надзаголовка направлений */
+.pg-desc { max-width: 560px; font-size: 14px; line-height: 1.85; color: #4d5a6c; }
+.pg-desc p + p { margin-top: 12px; }
+.pg-directions .section-head { align-items: flex-start; }
+
+/* длинные слова в заголовках карточек («Высококвалифицированные») — перенос, а не вылет */
+.pg-adv-card h3, .pg-card__title, .pg-dir-title, .pg-city__name { hyphens: auto; overflow-wrap: break-word; }
+.pg-adv-card h3 { font-size: clamp(20px, 2vw, 25px); }
+.pg-contact-value { font-size: clamp(19px, 2vw, 24px); }
+
+/* ── Главная Ростова (25.10.2026): тексты слайдов старого первого экрана — карточками под полосой доверия ── */
+.pg-focus { padding-top: 56px; padding-bottom: 8px; }
+.pg-focus-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.pg-focus-card { background: #f0f1f2; border-radius: 6px; padding: 26px 24px 28px; }
+.pg-focus-num { font-size: 12px; color: #76808b; }
+.pg-focus-title { font-size: 22px; font-weight: 500; letter-spacing: -.035em; line-height: 1.15; margin: 14px 0 12px; color: var(--ink); }
+.pg-focus-card p:not(.pg-focus-title) { font-size: 15px; line-height: 1.75; color: #5a6677; }
+.pg-adv--home { padding-top: 0; }
+@media (max-width: 1100px) { .pg-focus-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 540px) { .pg-focus { padding-top: 40px; } .pg-focus-grid { grid-template-columns: 1fr; gap: 12px; } .pg-focus-title { font-size: 20px; } }
+
+/* ── Ростов: выжимка «Коротко» и текст вокруг цен, описания групп услуг (25.10.2026) ── */
+.pg-summary { padding-bottom: 0; }
+.pg-summary__body { max-width: 860px; }
+.pg-summary__body h2 { font-size: clamp(30px, 3vw, 42px); margin-bottom: 18px; }
+.pg-summary__body h2:not(:first-child) { margin-top: 36px; }
+.pg-summary__body p { font-size: 16px; line-height: 1.8; color: #4f5c6e; }
+.pg-summary__body p + p { margin-top: 14px; }
+.pg-dir-desc { font-size: 15px; line-height: 1.7; color: #5a6677; margin: 12px 0 4px; }
+.pg-desc p + p, .pg-desc p + h2, .pg-desc p + h3 { margin-top: 12px; }
+.pg-desc h2, .pg-desc h3 { font-size: 22px; letter-spacing: -.03em; margin-top: 18px; color: var(--ink); }
+.business-copy h3 { font-size: 23px; letter-spacing: -.035em; margin: 26px 0 10px; }
+.business-copy ul, .business-copy ol { margin: 14px 0 0; padding-left: 20px; font-size: 15px; line-height: 1.8; color: var(--muted); }
+@media (max-width: 540px) { .pg-summary__body p { font-size: 15px; } }
+
+/* ── Ростов (25.10.2026): уровни заголовков как в старой разметке, вид как в дизайне ── */
+:root .pg-approach .approach-title .pg-approach-title { font-weight: 500; line-height: 1.06; letter-spacing: -.045em; font-size: clamp(40px, 4.2vw, 62px); }
+:root .pg-item-title { font-weight: 500; letter-spacing: -.035em; line-height: 1.15; }
+:root .approach-details p.pg-item-title { font-size: 23px; color: #fff; margin-top: 0; max-width: none; line-height: 1.07; }
+:root .pg-steps-list p.pg-item-title { font-size: 24px; line-height: 1.2; margin-bottom: 10px; color: var(--ink); }
+:root .pg-adv-card p.pg-item-title { font-size: clamp(20px, 2vw, 25px); letter-spacing: -.04em; margin-bottom: 14px; color: var(--ink); hyphens: auto; overflow-wrap: break-word; }
+:root .service p.pg-dir-title { font-size: 31px; line-height: 1.07; letter-spacing: -.04em; font-weight: 500; color: var(--ink); margin-top: 0; }
+@media (max-width: 800px) { :root .pg-approach .approach-title .pg-approach-title { font-size: 44px; } :root .approach-details p.pg-item-title { font-size: 21px; } }
+@media (max-width: 540px) { :root .pg-approach .approach-title .pg-approach-title { font-size: 42px; } :root .approach-details p.pg-item-title { font-size: 23px; } :root .service p.pg-dir-title { font-size: 28px; } }
+.seo-grid p + p { margin-top: 12px; }
+:root .approach-details h3.pg-item-title, :root .approach-details h4.pg-item-title { font-size: 23px; color: #fff; }
+
+/* мостик «инфо → услуга» в статье (lib/bridge.js) */
+.pg-article .pg-bridge { background: var(--navy); color: #fff; border-radius: 6px; padding: 32px 34px; margin: 44px 0; }
+.pg-article .pg-bridge .eyebrow { color: #d1d9e5; margin-bottom: 14px; }
+.pg-article .pg-bridge h3 { font-size: clamp(24px, 2.2vw, 30px); line-height: 1.15; letter-spacing: -.035em; margin: 0 0 14px; color: #fff; font-weight: 500; }
+.pg-article .pg-bridge .pg-bridge-risk { font-size: 16px; line-height: 1.65; color: #dbe1e9; margin: 0; }
+.pg-article .pg-bridge .pg-bridge-row { display: flex; flex-wrap: wrap; align-items: center; gap: 20px 36px; margin-top: 22px; }
+.pg-article .pg-bridge .pg-bridge-price { display: flex; flex-direction: column; gap: 3px; margin: 0; }
+.pg-article .pg-bridge .pg-bridge-price strong { font-size: 30px; font-weight: 500; letter-spacing: -.04em; line-height: 1.1; color: #fff; }
+.pg-article .pg-bridge .pg-bridge-price span { font-size: 12px; color: #b8c5d5; }
+.pg-article .pg-bridge .pg-bridge-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 26px; }
+.pg-article .pg-bridge .btn { gap: 18px; }
+.pg-article .pg-bridge .text-link { margin-top: 0; color: #f2f4f7; border-bottom-color: #8a9bb0; }
+.pg-article .pg-bridge .pg-bridge-micro { font-size: 12px; color: #b8c5d5; margin: 16px 0 0; line-height: 1.7; }
+@media (max-width: 540px) { .pg-article .pg-bridge { padding: 24px 20px; } .pg-article .pg-bridge .btn { width: 100%; justify-content: space-between; } .pg-article .pg-bridge .pg-bridge-price strong { font-size: 26px; } }
+
+/* Читаемость (25.10.2026, Антон: «сильно мелкий текст»).
+   Макет задавал тексту 9–13 px, на телефоне 7–12 px. Здесь только размеры шрифта (и ширина
+   колонок под них) — сетка, цвета и порядок блоков макета не меняются.
+   Подключается ПОСЛЕДНИМ (app/(home)/layout.jsx, app/(site)/layout.jsx, scripts/build-404-css.mjs);
+   :root в начале селектора поднимает вес над правилами макета, в том числе над его медиазапросами.
+   Шкала: текст для чтения 16 px (телефон 15), подписи 13–14 px, надзаголовки 12 px (телефон 11). */
+
+/* ── Общее ── */
+:root .eyebrow { font-size: 12px; }
+:root .hero-content .eyebrow, :root .hero h1 .eyebrow { font-size: 12px; }
+:root .section-desc { font-size: 16px; line-height: 1.7; max-width: 460px; }
+:root .topbar { font-size: 12px; }
+:root .header nav { font-size: 15px; }
+:root .header-phone span { font-size: 12px; }
+:root dialog p:not(.eyebrow) { font-size: 15px; }
+
+/* ── Первый экран и полоса доверия ── */
+:root .hero-lead { font-size: 18px; }
+:root .hero-link { font-size: 14px; }
+:root .hero-note { font-size: 13px; }
+:root .hero-index { font-size: 12px; }
+:root .hero-index span { font-size: 11px; }
+:root .photo-tag { font-size: 13px; }
+:root .photo-tag small { font-size: 12px; }
+:root .trust p { font-size: 14px; max-width: none; }
+
+/* ── Направления ── */
+:root .service .number { font-size: 12px; }
+:root .service-label { font-size: 11px; }
+:root .service p { font-size: 15px; }
+:root .service-links a, :root .service-links span { font-size: 13px; }
+:root .service-cta { font-size: 14px; }
+:root .under-services { font-size: 14px; }
+
+/* ── Подход, цены, бизнесу, шаги ── */
+:root .approach-title > p:not(.eyebrow) { font-size: 16px; max-width: 420px; }
+:root .approach-details p { font-size: 15px; max-width: 420px; }
+:root .approach-details article > span { font-size: 13px; }
+:root .text-link { font-size: 14px; }
+:root .calc-input label { font-size: 13px; }
+:root .calc-input select { font-size: 15px; }
+:root .calc-help { font-size: 14px; }
+:root .segmented button { font-size: 13px; }
+:root .calc-result > p:not(.eyebrow) { font-size: 14px; }
+:root .calc-result li { font-size: 15px; }
+:root .price-source { font-size: 13px; }
+:root .business-copy > p:not(.eyebrow) { font-size: 16px; max-width: 440px; }
+:root .business-facts span { font-size: 15px; }
+:root .image-caption { font-size: 11px; }
+:root .steps article > span { font-size: 13px; }
+:root .steps p { font-size: 15px; max-width: 260px; }
+
+/* ── География, О службе, FAQ, заявка ── */
+:root .geography p:not(.eyebrow) { font-size: 15px; }
+:root .cities a { font-size: 15px; }
+:root .seo-grid h3 { font-size: 24px; }
+:root .seo-grid p { font-size: 16px; line-height: 1.8; }
+:root .faq summary { font-size: 18px; }
+:root .faq details p { font-size: 16px; line-height: 1.8; max-width: 600px; }
+:root .faq-aside { font-size: 14px; }
+:root .contact p:not(.eyebrow) { font-size: 16px; }
+:root .contact-form { font-size: 13px; }
+
+/* ── Подвал ── */
+:root .footer-top p { font-size: 14px; }
+:root .footer-top h3, :root .footer-nav h3 { font-size: 14px; }
+:root .footer-links { font-size: 14px; }
+:root .footer-nav ul { font-size: 14px; }
+:root .footer-bottom { font-size: 12px; }
+:root .mobile-bar a { font-size: 14px; }
+
+/* ── Шапка и подвал внутренних страниц (site-chrome.css) ── */
+:root .mega__title, :root .site-header .mega__title { font-size: 12px; }
+:root .footer-cta, :root .site-footer .footer-cta { font-size: 14px; }
+:root .footer-cities, :root .site-footer .footer-cities { font-size: 14px; }
+
+/* ── Внутренние страницы (pages.css) ── */
+:root .pg-crumbs ol { font-size: 13px; }
+:root .site .price-table thead th, :root .price-table thead th { font-size: 12px; }
+:root .pg-dir-list a { font-size: 15px; }
+:root .pg-check { font-size: 13px; }
+:root .post-card__cat, :root .pg-post-card .post-card__cat { font-size: 12px; }
+:root .pg-steps-list article > span { font-size: 12px; }
+:root .pg-post-card__lead { font-size: 15px; }
+:root .pg-post-card__go { font-size: 14px; }
+:root .pg-contact-card small { font-size: 14px; }
+:root .pg-contact p:not(.eyebrow) { font-size: 16px; }
+
+/* ── Телефон ── */
+@media (max-width: 540px) {
+  :root .eyebrow { font-size: 11px; letter-spacing: .1em; }
+  :root .hero-content .eyebrow, :root .hero h1 .eyebrow { font-size: 10px; letter-spacing: .06em; max-width: 320px; }
+  :root .section-desc { font-size: 15px; }
+  :root .topbar { font-size: 12px; }
+  :root .header-phone span { font-size: 10px; }
+  :root .hero-lead { font-size: 15px; line-height: 1.7; }
+  :root .hero-link { font-size: 13px; }
+  :root .hero-note { font-size: 12px; }
+  :root .hero-index { font-size: 11px; }
+  :root .hero-index span { font-size: 10px; }
+  :root .trust p { font-size: 13px; }
+  :root .service-links a, :root .service-links span { font-size: 12px; }
+  :root .approach-title > p:not(.eyebrow), :root .approach-details p { font-size: 15px; }
+  :root .segmented button { font-size: 12px; }
+  :root .business-copy > p:not(.eyebrow) { font-size: 15px; }
+  :root .steps p { font-size: 15px; }
+  :root .geography p:not(.eyebrow) { font-size: 15px; }
+  :root .cities a { font-size: 14px; }
+  :root .seo-grid h3 { font-size: 21px; }
+  :root .seo-grid p { font-size: 15px; }
+  :root .faq summary { font-size: 16px; }
+  :root .faq details p { font-size: 15px; }
+  :root .contact p:not(.eyebrow) { font-size: 15px; }
+  :root .footer-top p { font-size: 14px; }
+  :root .footer-bottom { font-size: 12px; }
+  :root .mega__title, :root .site-header .mega__title { font-size: 11px; }
+  :root .footer-cities, :root .site-footer .footer-cities { font-size: 14px; }
+  :root .pg-crumbs ol { font-size: 12px; }
+  :root .site .price-table thead th, :root .price-table thead th { font-size: 11px; }
+  :root .pg-contact p:not(.eyebrow) { font-size: 15px; }
+}
